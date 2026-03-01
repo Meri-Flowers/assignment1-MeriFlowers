@@ -1,119 +1,170 @@
-/* Basic reset */
+/* style.css */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
 body {
-    background-color: lemonchiffon;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: lemonchiffon;
+    line-height:1.75;
 }
 
+/* CONTAINER */
 .container {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.title {
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    z-index: 1000;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
     text-align: center;
-    font-size: 50px;
-    color: darkred;
-    padding: 10px;
-    height: fit-content;
-    border: 3px solid darkred;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    padding: 10px 0;
 }
 
+.title {
+    font-size: 2.4rem;
+    color: lemonchiffon;
+    border: 3px solid darkred;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* NAVIGATION */
 nav {
+    background-color: transparent;
+    padding: 10px 0;
     display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
 }
 
 nav a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 8px 12px;
-    font-size: 18px;
-    justify-content: stretch;
-    color: #fff;
+    padding: 8px 14px;
     background-color: darkred;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover,
-nav a:focus {
-    background-color: #ca6666;
-}
-
-#quote {
-    display: flex;
-    align-content: center;
-    text-align: center;
-    font-style: italic;
-    padding: 16px;
-    border-radius: 4px;
-    font-size: 18px;
     color: lemonchiffon;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
     background-color: #333;
-    max-width: 400px;
 }
-#team,
+
+/* SECTIONS */
+section {
+    margin: 40px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+}
+
+/* QUOTE SECTION */
+#quote {
+    background-color: lemonchiffon;
+    color: darkred;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px 0px;
+    margin: 20px 0px;
+    border: solid lemonchiffon;
+}
+
+/* SERVICES */
 #services {
-    display: inline-flex;
-    flex-direction: column;
-    
-    justify-content: center;
-    font-size: 18px;
-
+    text-align: center;
+    padding:100px 20px;
 }
 
-/* #services {
-    flex-direction: column;
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px; */
-
-
-/* #services {} {
-    flex-direction: column;
-    position: relative;
-    display: inline-block;
-    align-items: center;
-    width: 75%;
-    border: 2px solid #8B0000; */
-    
+#services img {
+    width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
 #services ul {
-    list-style-type: square;
-    padding-left: 20px;
+    list-style: none;
+    
+}
+#services h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: darkred;
+}
+#services li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid darkred;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
+/* INTRO TEXT */
 .intro {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 20px 0;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 40px;
+    margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: lemonchiffon;
 }
 
-hr {
-    border: 1px solid #8B0000;
-    margin: 40px 0;
+/* CONTACT US */
+.contact-info, .hours-location-title {
+    text-align: center;
+}.call-text-email {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.phone-number, .email-address, .hours-location-content{
+    text-align: left;
+    font-size: 1.1rem;
+    margin: 5px;
+    padding: 0px;
+}
+
+/* ABOUT US */
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: darkred;
+    margin-bottom: 10px;
+}
+.anderson, .cornbread, .sketti, .twyla, .piano, .diamond {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+img {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
