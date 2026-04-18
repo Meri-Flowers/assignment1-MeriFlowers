@@ -72,7 +72,7 @@ section {
     border-radius: 8px;
 }
 
-/* QUOTE SECTION */
+/* QUOTE BOX */
 #quote {
     background-color: lemonchiffon;
     color: darkred;
@@ -167,4 +167,100 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+/* FEEDBACK POPUP */
+dialog#feedback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: lemonchiffon;
+    color: darkred;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+dialog#feedback::backdrop {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: lemonchiffon;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: #333;
+}
+
+/* QUOTE FORM */
+.quote-form-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: lemonchiffon;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid darkred;
+    border-radius: 5px;
+    background-color: #111;
+    color: lemonchiffon;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+.submit-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkred;
+    color: lemonchiffon;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #b22222;
 }
