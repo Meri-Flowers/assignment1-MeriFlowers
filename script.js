@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (quoteForm) {
         quoteForm.addEventListener('submit', function(event) {
             event.preventDefault();
+
             
             var formData = {
                 name: document.getElementById('name').value,
@@ -42,9 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 service: document.getElementById('service').value,
                 message: document.getElementById('message').value
             };
-            
-            console.log('Quote request submitted:', formData);
-            alert('Thank you for your quote request! Our Cat Boys will contact you soon at ' + formData.email);
             quoteForm.reset();
         });
     }
