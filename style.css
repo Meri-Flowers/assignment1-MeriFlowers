@@ -15,7 +15,7 @@ body {
 
 /* CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -30,6 +30,10 @@ header {
     text-align: center;
     margin-bottom: 0;
     padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
@@ -38,6 +42,25 @@ header {
     border: 3px solid darkred;
     padding: 10px 15px;
     display: inline-block;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    margin-right: 10px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: lemonchiffon;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* NAVIGATION */
@@ -163,7 +186,8 @@ h2 {
     margin-bottom: 10px;
 }
 img {
-    width: 300px;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -263,4 +287,99 @@ dialog#feedback::backdrop {
 
 .submit-btn:hover {
     background-color: #b22222;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1024px) {
+    .container {
+        padding: 16px;
+    }
+
+    header {
+        padding: 12px 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    section {
+        margin: 32px 16px;
+        padding: 18px;
+    }
+
+    #services {
+        padding: 80px 16px;
+    }
+
+    #services img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding: 14px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    section {
+        margin: 24px 0;
+        padding: 16px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .quote-form-section {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn,
+    .button-group button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 14px;
+    }
 }
